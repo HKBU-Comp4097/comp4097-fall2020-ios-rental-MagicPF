@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD16009255C5D5400D3AF83 /* AppDelegate.swift */; };
+		6FD1600C255C5D5400D3AF83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1600B255C5D5400D3AF83 /* SceneDelegate.swift */; };
+		6FD1600E255C5D5400D3AF83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1600D255C5D5400D3AF83 /* ViewController.swift */; };
+		6FD16011255C5D5400D3AF83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD1600F255C5D5400D3AF83 /* Main.storyboard */; };
+		6FD16013255C5D5700D3AF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD16012255C5D5700D3AF83 /* Assets.xcassets */; };
+		6FD16016255C5D5700D3AF83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD16014255C5D5700D3AF83 /* LaunchScreen.storyboard */; };
+		6FD16021255C5D5700D3AF83 /* Estate_RentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD16020255C5D5700D3AF83 /* Estate_RentalTests.swift */; };
+		6FD1602C255C5D5700D3AF83 /* Estate_RentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1602B255C5D5700D3AF83 /* Estate_RentalUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FD1601D255C5D5700D3AF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD15FFE255C5D5400D3AF83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FD16005255C5D5400D3AF83;
+			remoteInfo = "Estate Rental";
+		};
+		6FD16028255C5D5700D3AF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD15FFE255C5D5400D3AF83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FD16005255C5D5400D3AF83;
+			remoteInfo = "Estate Rental";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FD16006255C5D5400D3AF83 /* Estate Rental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Estate Rental.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD16009255C5D5400D3AF83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6FD1600B255C5D5400D3AF83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6FD1600D255C5D5400D3AF83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FD16010255C5D5400D3AF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FD16012255C5D5700D3AF83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FD16015255C5D5700D3AF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6FD16017255C5D5700D3AF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FD1601C255C5D5700D3AF83 /* Estate RentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Estate RentalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD16020255C5D5700D3AF83 /* Estate_RentalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estate_RentalTests.swift; sourceTree = "<group>"; };
+		6FD16022255C5D5700D3AF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FD16027255C5D5700D3AF83 /* Estate RentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Estate RentalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD1602B255C5D5700D3AF83 /* Estate_RentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estate_RentalUITests.swift; sourceTree = "<group>"; };
+		6FD1602D255C5D5700D3AF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FD16003255C5D5400D3AF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD16019255C5D5700D3AF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD16024255C5D5700D3AF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FD15FFD255C5D5400D3AF83 = {
+			isa = PBXGroup;
+			children = (
+				6FD16008255C5D5400D3AF83 /* Estate Rental */,
+				6FD1601F255C5D5700D3AF83 /* Estate RentalTests */,
+				6FD1602A255C5D5700D3AF83 /* Estate RentalUITests */,
+				6FD16007255C5D5400D3AF83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FD16007255C5D5400D3AF83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FD16006255C5D5400D3AF83 /* Estate Rental.app */,
+				6FD1601C255C5D5700D3AF83 /* Estate RentalTests.xctest */,
+				6FD16027255C5D5700D3AF83 /* Estate RentalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FD16008255C5D5400D3AF83 /* Estate Rental */ = {
+			isa = PBXGroup;
+			children = (
+				6FD16009255C5D5400D3AF83 /* AppDelegate.swift */,
+				6FD1600B255C5D5400D3AF83 /* SceneDelegate.swift */,
+				6FD1600D255C5D5400D3AF83 /* ViewController.swift */,
+				6FD1600F255C5D5400D3AF83 /* Main.storyboard */,
+				6FD16012255C5D5700D3AF83 /* Assets.xcassets */,
+				6FD16014255C5D5700D3AF83 /* LaunchScreen.storyboard */,
+				6FD16017255C5D5700D3AF83 /* Info.plist */,
+			);
+			path = "Estate Rental";
+			sourceTree = "<group>";
+		};
+		6FD1601F255C5D5700D3AF83 /* Estate RentalTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FD16020255C5D5700D3AF83 /* Estate_RentalTests.swift */,
+				6FD16022255C5D5700D3AF83 /* Info.plist */,
+			);
+			path = "Estate RentalTests";
+			sourceTree = "<group>";
+		};
+		6FD1602A255C5D5700D3AF83 /* Estate RentalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6FD1602B255C5D5700D3AF83 /* Estate_RentalUITests.swift */,
+				6FD1602D255C5D5700D3AF83 /* Info.plist */,
+			);
+			path = "Estate RentalUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FD16005255C5D5400D3AF83 /* Estate Rental */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD16030255C5D5700D3AF83 /* Build configuration list for PBXNativeTarget "Estate Rental" */;
+			buildPhases = (
+				6FD16002255C5D5400D3AF83 /* Sources */,
+				6FD16003255C5D5400D3AF83 /* Frameworks */,
+				6FD16004255C5D5400D3AF83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Estate Rental";
+			productName = "Estate Rental";
+			productReference = 6FD16006255C5D5400D3AF83 /* Estate Rental.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FD1601B255C5D5700D3AF83 /* Estate RentalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD16033255C5D5700D3AF83 /* Build configuration list for PBXNativeTarget "Estate RentalTests" */;
+			buildPhases = (
+				6FD16018255C5D5700D3AF83 /* Sources */,
+				6FD16019255C5D5700D3AF83 /* Frameworks */,
+				6FD1601A255C5D5700D3AF83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FD1601E255C5D5700D3AF83 /* PBXTargetDependency */,
+			);
+			name = "Estate RentalTests";
+			productName = "Estate RentalTests";
+			productReference = 6FD1601C255C5D5700D3AF83 /* Estate RentalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6FD16026255C5D5700D3AF83 /* Estate RentalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD16036255C5D5700D3AF83 /* Build configuration list for PBXNativeTarget "Estate RentalUITests" */;
+			buildPhases = (
+				6FD16023255C5D5700D3AF83 /* Sources */,
+				6FD16024255C5D5700D3AF83 /* Frameworks */,
+				6FD16025255C5D5700D3AF83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FD16029255C5D5700D3AF83 /* PBXTargetDependency */,
+			);
+			name = "Estate RentalUITests";
+			productName = "Estate RentalUITests";
+			productReference = 6FD16027255C5D5700D3AF83 /* Estate RentalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FD15FFE255C5D5400D3AF83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					6FD16005255C5D5400D3AF83 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					6FD1601B255C5D5700D3AF83 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 6FD16005255C5D5400D3AF83;
+					};
+					6FD16026255C5D5700D3AF83 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 6FD16005255C5D5400D3AF83;
+					};
+				};
+			};
+			buildConfigurationList = 6FD16001255C5D5400D3AF83 /* Build configuration list for PBXProject "Estate Rental" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FD15FFD255C5D5400D3AF83;
+			productRefGroup = 6FD16007255C5D5400D3AF83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FD16005255C5D5400D3AF83 /* Estate Rental */,
+				6FD1601B255C5D5700D3AF83 /* Estate RentalTests */,
+				6FD16026255C5D5700D3AF83 /* Estate RentalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FD16004255C5D5400D3AF83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD16016255C5D5700D3AF83 /* LaunchScreen.storyboard in Resources */,
+				6FD16013255C5D5700D3AF83 /* Assets.xcassets in Resources */,
+				6FD16011255C5D5400D3AF83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD1601A255C5D5700D3AF83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD16025255C5D5700D3AF83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FD16002255C5D5400D3AF83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD1600E255C5D5400D3AF83 /* ViewController.swift in Sources */,
+				6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */,
+				6FD1600C255C5D5400D3AF83 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD16018255C5D5700D3AF83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD16021255C5D5700D3AF83 /* Estate_RentalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD16023255C5D5700D3AF83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD1602C255C5D5700D3AF83 /* Estate_RentalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FD1601E255C5D5700D3AF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FD16005255C5D5400D3AF83 /* Estate Rental */;
+			targetProxy = 6FD1601D255C5D5700D3AF83 /* PBXContainerItemProxy */;
+		};
+		6FD16029255C5D5700D3AF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FD16005255C5D5400D3AF83 /* Estate Rental */;
+			targetProxy = 6FD16028255C5D5700D3AF83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6FD1600F255C5D5400D3AF83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FD16010255C5D5400D3AF83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6FD16014255C5D5700D3AF83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FD16015255C5D5700D3AF83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6FD1602E255C5D5700D3AF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6FD1602F255C5D5700D3AF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FD16031255C5D5700D3AF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Estate Rental/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MagicPF.Estate-Rental";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FD16032255C5D5700D3AF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Estate Rental/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MagicPF.Estate-Rental";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6FD16034255C5D5700D3AF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Estate RentalTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MagicPF.Estate-RentalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Estate Rental.app/Estate Rental";
+			};
+			name = Debug;
+		};
+		6FD16035255C5D5700D3AF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Estate RentalTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MagicPF.Estate-RentalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Estate Rental.app/Estate Rental";
+			};
+			name = Release;
+		};
+		6FD16037255C5D5700D3AF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Estate RentalUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MagicPF.Estate-RentalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Estate Rental";
+			};
+			name = Debug;
+		};
+		6FD16038255C5D5700D3AF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Estate RentalUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MagicPF.Estate-RentalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Estate Rental";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FD16001255C5D5400D3AF83 /* Build configuration list for PBXProject "Estate Rental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD1602E255C5D5700D3AF83 /* Debug */,
+				6FD1602F255C5D5700D3AF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD16030255C5D5700D3AF83 /* Build configuration list for PBXNativeTarget "Estate Rental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD16031255C5D5700D3AF83 /* Debug */,
+				6FD16032255C5D5700D3AF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD16033255C5D5700D3AF83 /* Build configuration list for PBXNativeTarget "Estate RentalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD16034255C5D5700D3AF83 /* Debug */,
+				6FD16035255C5D5700D3AF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD16036255C5D5700D3AF83 /* Build configuration list for PBXNativeTarget "Estate RentalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD16037255C5D5700D3AF83 /* Debug */,
+				6FD16038255C5D5700D3AF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FD15FFE255C5D5400D3AF83 /* Project object */;
+}
