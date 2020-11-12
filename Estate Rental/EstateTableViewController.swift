@@ -1,5 +1,5 @@
 //
-//  HomeTableViewController.swift
+//  EstateTableViewController.swift
 //  Estate Rental
 //
 //  Created by 潘丰 on 12/11/2020.
@@ -7,20 +7,9 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class EstateTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -28,20 +17,18 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return property.Property.count
+        return EstateOpt.sampleData.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "propertyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EstateCell", for: indexPath)
         
 //        cell.textLabel?.text = "Section number: \(indexPath.section), Row number: \(indexPath.row)"
         
-        cell.textLabel?.text = property.Property[indexPath.row].property_title
-//        cell.TitleView?.text = property.Property[indexPath.row].property_title
-        cell.imageView?.image = UIImage(named: property.Property[indexPath.row].image_URL)
+        cell.textLabel?.text = EstateOpt.sampleData[indexPath.row].title
+        
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.

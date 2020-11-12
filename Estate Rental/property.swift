@@ -38,14 +38,14 @@ class property: NSObject, MKAnnotation  {
 extension property {
     
     static let Property: [property] = [
-        property(id:1,property_title: "AC Hall",
-                 estate: "大學會堂",image_URL: "www.baidu.com",
+        property(id:1,property_title: "德福花园",
+                 estate: "大學會堂",image_URL: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4237777178,4221789832&amp;fm=26&amp;gp=0.jpg",
                          coordinate: CLLocationCoordinate2D(latitude: 22.341280, longitude: 114.179768)),
-        property(id:2,property_title: "Lam Woo International Conference Center",
-                 estate: "林護國際會議中心",image_URL: "www.baidu.com",
+        property(id:2,property_title: "淘大花园",
+                 estate: "林護國際會議中心",image_URL: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=659128221,1784325424&amp;fm=26&amp;gp=0.jpg",
                          coordinate: CLLocationCoordinate2D(latitude: 22.337716, longitude: 114.182013)),
-        property(id:3,property_title: "Communication and Visual Arts Building",
-                 estate: "傳理大樓",image_URL: "www.baidu.com",
+        property(id:3,property_title: "德宝花园",
+                 estate: "傳理大樓",image_URL: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1519304257,4250930154&amp;fm=26&amp;gp=0.jpg",
                          coordinate: CLLocationCoordinate2D(latitude: 22.334382, longitude: 114.182528))
             ]
     
