@@ -15,6 +15,10 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.setCenterLocation(campusLocation)
+        mapView.showsUserLocation = true
+        for property in property.Property {
+            mapView.addAnnotation(property)
+        }
         // Do any additional setup after loading the view.
     }
     
