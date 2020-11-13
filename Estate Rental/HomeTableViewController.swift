@@ -8,9 +8,23 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    let networkController = NetworkController()
+    var property: [Property] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkController.fetchNews(completionHandler:
+            { (property) in
+                DispatchQueue.main.async {
+                    self.property = property
+                    self.tableView.reloadData()
+                }
+        }) { (error) in
+            DispatchQueue.main.async {
+                self.property = []
+                self.tableView.reloadData()
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,18 +42,35 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return property.Property.count
+        return property.count
     }
 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "propertyCell", for: indexPath)
-        
-//        cell.textLabel?.text = "Section number: \(indexPath.section), Row number: \(indexPath.row)"
-        
-        cell.textLabel?.text = property.Property[indexPath.row].property_title
-//        cell.TitleView?.text = property.Property[indexPath.row].property_title
-        cell.imageView?.image = UIImage(named: property.Property[indexPath.row].image_URL)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyCell", for: indexPath)
+        if let imageView = cell.viewWithTag(100) as? UIImageView {
+                    
+            networkController.fetchImage(for: property[indexPath.row].image_URL, completionHandler: { (data) in
+                DispatchQueue.main.async {
+                    imageView.image = UIImage(data: data, scale:1)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                    imageView.image = UIImage(systemName: "house.fill")
+                }
+            }
+            
+        }
+            
+            if let cellLabel = cell.viewWithTag(200) as? UILabel {
+                cellLabel.text = property[indexPath.row].property_title
+            }
+            
+            if let cellLabel = cell.viewWithTag(300) as? UILabel {
+                cellLabel.text = property[indexPath.row].estate
+            }
+
+            return cell
     }
     
 
@@ -59,7 +90,7 @@ class HomeTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

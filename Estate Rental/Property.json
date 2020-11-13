@@ -1,0 +1,80 @@
+[
+    {
+        "createdAt": 1601281155352,
+        "updatedAt": 1601281155352,
+        "id": 1,
+        "property_title": "Best Price for Lease",
+        "image_URL": "https://hintegro.com/wp-content/uploads/2017/08/ken_025016_PSD.jpg",
+        "estate": "Festival City",
+        "bedrooms": 3,
+        "gross_area": 700,
+        "expected_tenants": 5,
+        "rent": 21000,
+        "h_Property": "on"
+    },
+    {
+        "createdAt": 1601281155352,
+        "updatedAt": 1601281155352,
+        "id": 2,
+        "property_title": "Japanese Styled Diamond Flat",
+        "image_URL": "https://cdn.shopify.com/s/files/1/0657/8313/files/Whampoa_Garden.jpg?18322862688378349113",
+        "estate": "Whampoa Garden",
+        "bedrooms": 2,
+        "gross_area": 389,
+        "expected_tenants": 4,
+        "rent": 15000,
+        "h_Property": "on"
+    },
+    {
+        "createdAt": 1601281155352,
+        "updatedAt": 1601281155352,
+        "id": 3,
+        "property_title": "Sea View",
+        "image_URL": "http://www.nelson-design.com.hk/wp-content/uploads/2016/02/3-22-cam-1_final.jpg",
+        "estate": "LOHAS Park",
+        "bedrooms": 5,
+        "gross_area": 1280,
+        "expected_tenants": 10,
+        "rent": 35000,
+        "h_Property": "on"
+    },
+    {
+        "createdAt": 1601281155352,
+        "updatedAt": 1601281155352,
+        "id": 4,
+        "property_title": "Nice Decoration",
+        "image_URL": "https://tind.hk/wp-content/uploads/2020/07/11-3-2048x1363.jpg",
+        "estate": "City One Shatin",
+        "bedrooms": 4,
+        "gross_area": 853,
+        "expected_tenants": 6,
+        "rent": 25000,
+        "h_Property": "on"
+    },
+    {
+        "createdAt": 1603361397533,
+        "updatedAt": 1603361397533,
+        "id": 5,
+        "property_title": "An decent apartment",
+        "image_URL": "https://www.gatewayapartments.com.hk/files/slider-room-1br-studyroom_0.jpg",
+        "estate": "Laguna City",
+        "bedrooms": 3,
+        "gross_area": 900,
+        "expected_tenants": 5,
+        "rent": 3500,
+        "h_Property": "on"
+    },
+    {
+        "createdAt": 1603361421426,
+        "updatedAt": 1603361421426,
+        "id": 6,
+        "property_title": "An decent apartment",
+        "image_URL": "https://www.gatewayapartments.com.hk/files/slider-room-1br-studyroom_0.jpg",
+        "estate": "South Horizons",
+        "bedrooms": 3,
+        "gross_area": 300,
+        "expected_tenants": 3,
+        "rent": 1234,
+        "h_Property": ""
+    }
+]

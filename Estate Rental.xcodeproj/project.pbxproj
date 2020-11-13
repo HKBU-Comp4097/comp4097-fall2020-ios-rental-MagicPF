@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F298173255CD88F007C5A42 /* property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F298172255CD88F007C5A42 /* property.swift */; };
 		6F298178255D0C1C007C5A42 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F298177255D0C1C007C5A42 /* UserViewController.swift */; };
 		6F29817D255D11AB007C5A42 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F29817C255D11AB007C5A42 /* HomeTableViewController.swift */; };
+		6F416C06255E97D6008208F8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F416C05255E97D6008208F8 /* NetworkController.swift */; };
 		6F5454F0255D526A0036B637 /* EstateOpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454EF255D526A0036B637 /* EstateOpt.swift */; };
 		6F5454F5255D52D60036B637 /* EstateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454F4255D52D60036B637 /* EstateTableViewController.swift */; };
 		6F5454FA255D53DD0036B637 /* RoomOpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454F9255D53DD0036B637 /* RoomOpt.swift */; };
@@ -43,9 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F298172255CD88F007C5A42 /* property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = property.swift; sourceTree = "<group>"; };
 		6F298177255D0C1C007C5A42 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		6F29817C255D11AB007C5A42 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		6F416C05255E97D6008208F8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		6F5454EF255D526A0036B637 /* EstateOpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateOpt.swift; sourceTree = "<group>"; };
 		6F5454F4255D52D60036B637 /* EstateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateTableViewController.swift; sourceTree = "<group>"; };
 		6F5454F9255D53DD0036B637 /* RoomOpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomOpt.swift; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 				6F5454F9255D53DD0036B637 /* RoomOpt.swift */,
 				6F5454FE255D548E0036B637 /* RoomTableViewController.swift */,
 				6F29817C255D11AB007C5A42 /* HomeTableViewController.swift */,
+				6F416C05255E97D6008208F8 /* NetworkController.swift */,
 				6F298177255D0C1C007C5A42 /* UserViewController.swift */,
-				6F298172255CD88F007C5A42 /* property.swift */,
 				6FD16012255C5D5700D3AF83 /* Assets.xcassets */,
 				6FD16014255C5D5700D3AF83 /* LaunchScreen.storyboard */,
 				6FD16017255C5D5700D3AF83 /* Info.plist */,
@@ -282,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F298173255CD88F007C5A42 /* property.swift in Sources */,
 				6F298178255D0C1C007C5A42 /* UserViewController.swift in Sources */,
 				6F5454FF255D548E0036B637 /* RoomTableViewController.swift in Sources */,
 				6FD1600E255C5D5400D3AF83 /* ViewController.swift in Sources */,
@@ -290,6 +289,7 @@
 				6F5454F0255D526A0036B637 /* EstateOpt.swift in Sources */,
 				6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */,
 				6F5454FA255D53DD0036B637 /* RoomOpt.swift in Sources */,
+				6F416C06255E97D6008208F8 /* NetworkController.swift in Sources */,
 				6F29817D255D11AB007C5A42 /* HomeTableViewController.swift in Sources */,
 				6FD1600C255C5D5400D3AF83 /* SceneDelegate.swift in Sources */,
 				6FD16043255C641800D3AF83 /* MapViewController.swift in Sources */,
