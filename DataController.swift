@@ -23,7 +23,7 @@ class DataController {
             
             // Called once initialization of Core Data stack is complete
             DispatchQueue.main.async {
-                self.seedData()
+//                self.seedData()
                 completion()
             }
         }
