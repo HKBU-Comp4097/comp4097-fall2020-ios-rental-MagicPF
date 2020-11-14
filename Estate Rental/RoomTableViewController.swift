@@ -37,7 +37,16 @@ class RoomTableViewController: UITableViewController {
         
         return cell
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let viewController = segue.destination as? SpecificTableViewController {
+                    
+                let Index = tableView.indexPathForSelectedRow!
+                viewController.RoomQuery = RoomOpt.sampleData[Index.row].query
+                
+                
+                }         // Get the new view controller using segue.destination.
+            // Pass the selected object to the new view controller.
+        }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

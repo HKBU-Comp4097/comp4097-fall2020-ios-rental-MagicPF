@@ -10,16 +10,15 @@ import Foundation
 struct RoomOpt {
     let id:Int
     let title: String
-    let minValue:Int
-    let maxValue:Int
+    let query:Int
 }
 
 extension RoomOpt {
     
     static let sampleData: [RoomOpt] = [
-        RoomOpt(id:1,title: "Room > 3",minValue:3,maxValue:10),
-        RoomOpt(id:2,title: "Room < 3",minValue:1,maxValue:2),
-        RoomOpt(id:3,title: "Room = 3",minValue:3,maxValue:3),
-        RoomOpt(id:4,title: "Room > 4",minValue:4,maxValue:10)
+        RoomOpt(id:1,title: "Room > 3",query:3),
+        RoomOpt(id:2,title: "Room < 2",query:-2),
+        RoomOpt(id:3,title: "Room > 4",query:4),
+        RoomOpt(id:4,title: "Room < 5",query:-5),
     ]
 }

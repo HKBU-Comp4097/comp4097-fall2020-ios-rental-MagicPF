@@ -5,18 +5,33 @@ class DataController {
     
     var persistentContainer: NSPersistentContainer
     let nwController = NetworkController()
+    var shouldSeedDatabase: Bool = false
     init(completion: @escaping () -> ()) {
+            
+        // Check if the database exists
+        do {
+            let databaseUrl =
+                try FileManager.default.url(for: .applicationSupportDirectory,
+                                            in: .userDomainMask, appropriateFor: nil,
+                                            create: false).appendingPathComponent("EstateRentalModel.sqlite")
+            
+            shouldSeedDatabase = !FileManager.default.fileExists(atPath: databaseUrl.path)
+        } catch {
+            shouldSeedDatabase = true
+        }
         
         persistentContainer = NSPersistentContainer(name: "EstateRentalModel")
+        
         persistentContainer.loadPersistentStores { (description, error) in
-            
             if let error = error {
-                fatalError("STTTTTTTTTCore Data stack could not be loaded. \(error)")
+                fatalError("Core Data stack could not be loaded. \(error)")
             }
             
             // Called once initialization of Core Data stack is complete
             DispatchQueue.main.async {
-                self.seedData()
+                if (self.shouldSeedDatabase) {
+                    self.seedData()
+                }
                 completion()
             }
         }

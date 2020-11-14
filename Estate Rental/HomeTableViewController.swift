@@ -73,7 +73,22 @@ class HomeTableViewController: UITableViewController {
             return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let viewController = segue.destination as? DetailViewController {
+                let Index = tableView.indexPathForSelectedRow! 
+                viewController.pid = (property[Index.row].id)
+                viewController.ptitle = property[Index.row].property_title
+                viewController.prent = (property[Index.row].rent)
+                viewController.parea = (property[Index.row].gross_area)
+                viewController.pimg = property[Index.row].image_URL
+                viewController.pbed = (property[Index.row].bedrooms)
+                viewController.pten = (property[Index.row].expected_tenants)
+                viewController.parea = (property[Index.row].gross_area)
+                viewController.pest = property[Index.row].estate
+            
+            }         // Get the new view controller using segue.destination.
+            // Pass the selected object to the new view controller.
+        }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
