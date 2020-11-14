@@ -74,7 +74,21 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func ShowMap(_ sender: UIButton) {
+        print("Button Pressed")
+        self.performSegue(withIdentifier: "ShowMap", sender: "Address Button")
+    }
+    
+//    @IBAction func MoveIN(_ sender: UIButton) {
+//        self.performSegue(withIdentifier: "MoveIN", sender: "Move in Button")
+//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "ShowMap"{
+            let viewcontroller = segue.destination as! MapViewController
+            viewcontroller.estate = self.pest
+            viewcontroller.apart = self.title
+         }
+     }
     /*
     // MARK: - Navigation
 
