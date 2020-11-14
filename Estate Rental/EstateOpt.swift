@@ -15,9 +15,22 @@ struct EstateOpt {
 extension EstateOpt {
     
     static let sampleData: [EstateOpt] = [
-        EstateOpt(id:1,title: "德福地产"),
-        EstateOpt(id:2,title: "淘大地产"),
-        EstateOpt(id:3,title: "德宝地产"),
-        EstateOpt(id:4,title: "汤臣地产"),
+        EstateOpt(id:1,title: "Heng Fa Chuen"),
+        EstateOpt(id:2,title: "Kornhill"),
+        EstateOpt(id:3,title: "South Horizons"),
+        EstateOpt(id:4,title: "Taikoo Shing"),
+        EstateOpt(id:5,title: "Amoy Gardens"),
+        EstateOpt(id:6,title: "Laguna City"),
+        EstateOpt(id:7,title: "Laguna Verde"),
+        EstateOpt(id:8,title: "Mei Foo Sun Chuen"),
+        EstateOpt(id:9,title: "Telford Gardens"),
+        EstateOpt(id:10,title: "Whampoa Garden"),
+        EstateOpt(id:11,title: "Ocean Shores"),
+        EstateOpt(id:12,title: "LOHAS Park"),
+        EstateOpt(id:13,title: "City One Shatin"),
+        EstateOpt(id:14,title: "Festival City"),
+        EstateOpt(id:15,title: "Sunshine City"),
+        EstateOpt(id:16,title: "Belvedere Garden"),
+        EstateOpt(id:17,title: "Kingswood Villas")
     ]
 }

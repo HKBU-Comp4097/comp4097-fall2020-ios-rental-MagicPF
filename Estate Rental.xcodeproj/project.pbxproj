@@ -11,11 +11,11 @@
 		6F29817D255D11AB007C5A42 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F29817C255D11AB007C5A42 /* HomeTableViewController.swift */; };
 		6F416C06255E97D6008208F8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F416C05255E97D6008208F8 /* NetworkController.swift */; };
 		6F5454F0255D526A0036B637 /* EstateOpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454EF255D526A0036B637 /* EstateOpt.swift */; };
-		6F5454F5255D52D60036B637 /* EstateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454F4255D52D60036B637 /* EstateTableViewController.swift */; };
 		6F5454FA255D53DD0036B637 /* RoomOpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454F9255D53DD0036B637 /* RoomOpt.swift */; };
-		6F5454FF255D548E0036B637 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5454FE255D548E0036B637 /* RoomTableViewController.swift */; };
+		6F62EF01255F9400007C4801 /* PropertyManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F62EEFF255F9400007C4801 /* PropertyManagedObject+CoreDataClass.swift */; };
+		6F62EF10255F9778007C4801 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F62EF0F255F9778007C4801 /* RoomTableViewController.swift */; };
+		6F62EF15255F98A4007C4801 /* EstateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F62EF14255F98A4007C4801 /* EstateTableViewController.swift */; };
 		6F985564255F05F20092C362 /* EstateRentalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F985562255F05F20092C362 /* EstateRentalModel.xcdatamodeld */; };
-		6F98556A255F07A80092C362 /* PropertyManangedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F985568255F07A80092C362 /* PropertyManangedObject+CoreDataClass.swift */; };
 		6F985573255F08690092C362 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F985572255F08690092C362 /* DataController.swift */; };
 		6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD16009255C5D5400D3AF83 /* AppDelegate.swift */; };
 		6FD1600C255C5D5400D3AF83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1600B255C5D5400D3AF83 /* SceneDelegate.swift */; };
@@ -50,11 +50,11 @@
 		6F29817C255D11AB007C5A42 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		6F416C05255E97D6008208F8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		6F5454EF255D526A0036B637 /* EstateOpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateOpt.swift; sourceTree = "<group>"; };
-		6F5454F4255D52D60036B637 /* EstateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateTableViewController.swift; sourceTree = "<group>"; };
 		6F5454F9255D53DD0036B637 /* RoomOpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomOpt.swift; sourceTree = "<group>"; };
-		6F5454FE255D548E0036B637 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		6F62EEFF255F9400007C4801 /* PropertyManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyManagedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6F62EF0F255F9778007C4801 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		6F62EF14255F98A4007C4801 /* EstateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateTableViewController.swift; sourceTree = "<group>"; };
 		6F985563255F05F20092C362 /* EstateRentalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstateRentalModel.xcdatamodel; sourceTree = "<group>"; };
-		6F985568255F07A80092C362 /* PropertyManangedObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyManangedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6F985572255F08690092C362 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		6FD16006255C5D5400D3AF83 /* Estate Rental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Estate Rental.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD16009255C5D5400D3AF83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		6FD15FFD255C5D5400D3AF83 = {
 			isa = PBXGroup;
 			children = (
-				6F985568255F07A80092C362 /* PropertyManangedObject+CoreDataClass.swift */,
+				6F62EEFF255F9400007C4801 /* PropertyManagedObject+CoreDataClass.swift */,
 				6F985572255F08690092C362 /* DataController.swift */,
 				6FD16008255C5D5400D3AF83 /* Estate Rental */,
 				6FD1601F255C5D5700D3AF83 /* Estate RentalTests */,
@@ -128,11 +128,11 @@
 				6FD1600D255C5D5400D3AF83 /* ViewController.swift */,
 				6FD1600F255C5D5400D3AF83 /* Main.storyboard */,
 				6F5454EF255D526A0036B637 /* EstateOpt.swift */,
-				6F5454F4255D52D60036B637 /* EstateTableViewController.swift */,
 				6F5454F9255D53DD0036B637 /* RoomOpt.swift */,
-				6F5454FE255D548E0036B637 /* RoomTableViewController.swift */,
 				6F29817C255D11AB007C5A42 /* HomeTableViewController.swift */,
 				6F985562255F05F20092C362 /* EstateRentalModel.xcdatamodeld */,
+				6F62EF0F255F9778007C4801 /* RoomTableViewController.swift */,
+				6F62EF14255F98A4007C4801 /* EstateTableViewController.swift */,
 				6F416C05255E97D6008208F8 /* NetworkController.swift */,
 				6F298177255D0C1C007C5A42 /* UserViewController.swift */,
 				6FD16012255C5D5700D3AF83 /* Assets.xcassets */,
@@ -292,19 +292,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F298178255D0C1C007C5A42 /* UserViewController.swift in Sources */,
-				6F5454FF255D548E0036B637 /* RoomTableViewController.swift in Sources */,
+				6F62EF15255F98A4007C4801 /* EstateTableViewController.swift in Sources */,
 				6FD1600E255C5D5400D3AF83 /* ViewController.swift in Sources */,
-				6F5454F5255D52D60036B637 /* EstateTableViewController.swift in Sources */,
 				6F5454F0255D526A0036B637 /* EstateOpt.swift in Sources */,
 				6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */,
 				6F5454FA255D53DD0036B637 /* RoomOpt.swift in Sources */,
 				6F985573255F08690092C362 /* DataController.swift in Sources */,
 				6F985564255F05F20092C362 /* EstateRentalModel.xcdatamodeld in Sources */,
+				6F62EF01255F9400007C4801 /* PropertyManagedObject+CoreDataClass.swift in Sources */,
 				6F416C06255E97D6008208F8 /* NetworkController.swift in Sources */,
 				6F29817D255D11AB007C5A42 /* HomeTableViewController.swift in Sources */,
 				6FD1600C255C5D5400D3AF83 /* SceneDelegate.swift in Sources */,
-				6F98556A255F07A80092C362 /* PropertyManangedObject+CoreDataClass.swift in Sources */,
 				6FD16043255C641800D3AF83 /* MapViewController.swift in Sources */,
+				6F62EF10255F9778007C4801 /* RoomTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

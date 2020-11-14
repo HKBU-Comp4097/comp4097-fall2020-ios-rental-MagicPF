@@ -11,12 +11,15 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var locationManager: CLLocationManager?
-
+    var dataController: DataController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         locationManager = CLLocationManager()
         locationManager?.requestWhenInUseAuthorization()
+        dataController = DataController() {
+            print("Core Data stack has been initialized.")
+        }
         return true
     }
 
