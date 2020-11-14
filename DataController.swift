@@ -7,11 +7,11 @@ class DataController {
     let nwController = NetworkController()
     init(completion: @escaping () -> ()) {
         
-        persistentContainer = NSPersistentContainer(name: "「PropertyModel")
+        persistentContainer = NSPersistentContainer(name: "EstateRentalModel")
         persistentContainer.loadPersistentStores { (description, error) in
             
             if let error = error {
-                fatalError("Core Data stack could not be loaded. \(error)")
+                fatalError("STTTTTTTTTCore Data stack could not be loaded. \(error)")
             }
             
             // Called once initialization of Core Data stack is complete
@@ -28,15 +28,15 @@ class DataController {
                     self.persistentContainer.performBackgroundTask { (managedObjectContext) in
                         property.forEach{(property)in
                             let propertyManagedObject = PropertyManagedObject(context: managedObjectContext)
-                            propertyManagedObject.createdAt = Int32(property.createdAt)
-                            propertyManagedObject.updatedAt = Int32(property.updatedAt)
-                            propertyManagedObject.id = Int32(property.id)
+                            propertyManagedObject.createdAt = Int64(property.createdAt)
+                            propertyManagedObject.updatedAt = Int64(property.updatedAt)
+                            propertyManagedObject.id = Int64(property.id)
                             propertyManagedObject.property_title = property.property_title
                             propertyManagedObject.image_URL = property.image_URL
                             propertyManagedObject.estate = property.estate
-                            propertyManagedObject.bedrooms = Int32(property.bedrooms)
-                            propertyManagedObject.gross_area = Int32(property.gross_area)
-                            propertyManagedObject.expected_tenants = Int32(property.expected_tenants)
+                            propertyManagedObject.bedrooms = Int64(property.bedrooms)
+                            propertyManagedObject.gross_area = Int64(property.gross_area)
+                            propertyManagedObject.expected_tenants = Int64(property.expected_tenants)
                             propertyManagedObject.h_Property = property.h_Property
                             do{
                                 try managedObjectContext.save()
