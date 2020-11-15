@@ -47,6 +47,9 @@
                                     <constraint firstAttribute="height" constant="44" id="P8b-j5-dmw"/>
                                 </constraints>
                                 <state key="normal" title="My Rental"/>
+                                <connections>
+                                    <segue destination="krC-o9-yms" kind="show" id="Qiy-hL-Zbz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yhF-Ip-Jqh"/>
@@ -77,6 +80,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKB-Sc-dxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4555.072463768116" y="279.91071428571428"/>
+        </scene>
+        <!--My Rental Table View Controller-->
+        <scene sceneID="QcZ-q9-d8O">
+            <objects>
+                <tableViewController id="krC-o9-yms" customClass="MyRentalTableViewController" customModule="Estate_Rental" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oy0-6z-vnt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyCell" id="HP5-kW-lMq">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HP5-kW-lMq" id="kGr-Mk-k2F">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="I9g-ew-b6H" kind="show" id="3KS-8p-bKe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="krC-o9-yms" id="pEL-xx-5nD"/>
+                            <outlet property="delegate" destination="krC-o9-yms" id="2w1-D2-9fV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UFD-0Z-pck"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jol-i8-UNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5625" y="1081"/>
         </scene>
         <!--Map-->
         <scene sceneID="xzh-CP-lgL">
@@ -116,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-C6-2dB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="2627"/>
+            <point key="canvasLocation" x="2451" y="1844"/>
         </scene>
         <!--EstateScene-->
         <scene sceneID="4Dg-No-zgJ">
@@ -148,7 +183,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChD-we-PQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="1110"/>
+            <point key="canvasLocation" x="1687" y="1110"/>
         </scene>
         <!--RoomScene-->
         <scene sceneID="T4m-l9-cve">
@@ -180,7 +215,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQP-mR-h3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2819" y="1110"/>
+            <point key="canvasLocation" x="3568" y="1110"/>
         </scene>
         <!--LoginPage-->
         <scene sceneID="JT9-dL-WTH">
@@ -190,12 +225,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gp-C6-ITs">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Juan" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gp-C6-ITs">
                                 <rect key="frame" x="105" y="238" width="205" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-0S-iUK">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bagguley" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-0S-iUK">
                                 <rect key="frame" x="105" y="356" width="205" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -400,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyV-2Q-OCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="1844"/>
+            <point key="canvasLocation" x="3791" y="1844"/>
         </scene>
         <!--Specific Table View Controller-->
         <scene sceneID="IvY-G9-zyt">
@@ -432,7 +467,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNv-Bb-UzI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2451" y="1844"/>
+            <point key="canvasLocation" x="2635" y="1110"/>
         </scene>
         <!--Property-->
         <scene sceneID="9mM-qe-crQ">
@@ -499,7 +534,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYV-92-1YT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="1110"/>
+            <point key="canvasLocation" x="629" y="1110"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qdM-nh-btf">
@@ -580,8 +615,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tgj-Tp-TzZ"/>
-        <segue reference="buf-qw-m02"/>
+        <segue reference="3DN-pd-uBS"/>
+        <segue reference="dIQ-ec-cOe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>

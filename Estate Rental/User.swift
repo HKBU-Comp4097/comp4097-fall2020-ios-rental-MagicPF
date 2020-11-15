@@ -19,5 +19,5 @@ struct User {
 
 extension User {
     
-    static var currentUser = User(createdAt: -1, updatedAt: -1, id: -1, username: "Username", password: "password", role: "everyone", avatar: "")
+    static var currentUser = User(createdAt: -1, updatedAt: -1, id: -1, username: "username", password: "password", role: "everyone", avatar: "")
 }

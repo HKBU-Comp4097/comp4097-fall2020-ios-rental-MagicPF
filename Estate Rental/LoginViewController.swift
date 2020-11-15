@@ -9,6 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    let networkController = NetworkController()
+    var father:UIViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         print("login page launched")
@@ -19,7 +21,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var PWTextField: UITextField!
     @IBOutlet weak var UserTextField: UITextField!
     @IBAction func LoginRequest(_ sender: UIButton) {
-        let networkController = NetworkController()
         networkController.Login(username:UserTextField.text ?? "",password: PWTextField.text ?? "", completionHandler:
             { (myuser) in
                 DispatchQueue.main.async {
@@ -36,11 +37,13 @@ class LoginViewController: UIViewController {
                             })
                         )
                         self.present(alert, animated: true, completion: nil)
-                    self.performSegue(withIdentifier: "LoginF", sender: "login")
+                    self.father?.viewDidLoad()
+                    self.presentingViewController!.dismiss(animated: true, completion: nil)
+                    
+//                    self.performSegue(withIdentifier: "login", sender: "login")
                 }
         }) { (error) in
             DispatchQueue.main.async {
-                print("The Error reason is \(error)")
                 let alert = UIAlertController(
                         title: "Oops! Login faild",
                     message: "There is sth wrong with your account~", preferredStyle: .alert)
@@ -55,14 +58,23 @@ class LoginViewController: UIViewController {
 
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let viewController = segue.source as? UserViewController {
+//            if User.currentUser.id != -1{
+//                networkController.fetchImage(for: User.currentUser.avatar, completionHandler: { (data) in
+//                    DispatchQueue.main.async {
+//                        viewController.avatarView.image = UIImage(data: data, scale:1)
+//                    }
+//                }) { (error) in
+//                    DispatchQueue.main.async {
+//                        viewController.avatarView.image = UIImage(systemName: "person.fill")
+//                    }
+//                }
+//                viewController.NameView.text = User.currentUser.username
+//
+//            }         // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//        }
+//
+//    }
 }

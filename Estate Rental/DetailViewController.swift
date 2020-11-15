@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
     var pimg:String?
     var parea:Int?
     var ptitle:String?
+    var report:String?
     @IBOutlet weak var PImage: UIImageView!
     @IBOutlet weak var PTitle: UILabel!
     @IBOutlet weak var PEstate: UILabel!
@@ -79,9 +80,51 @@ class DetailViewController: UIViewController {
         self.performSegue(withIdentifier: "ShowMap", sender: "Address Button")
     }
     
-//    @IBAction func MoveIN(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "MoveIN", sender: "Move in Button")
-//    }
+    @IBAction func MoveIN(_ sender: UIButton) {
+        
+        networkController.MoveIN(fk: pid ?? -1, method: "POST",completionHandler: { (response) in
+            DispatchQueue.main.async {
+                switch response {
+                case 200: self.report = "Congraduation! Moved In~"
+                case 422: self.report = "Already Full~"
+                case 409: self.report = "Already Rented,Moved Out~"
+                default: self.report = "Error Occured!!!"
+                }
+                
+                print("Inside The report is \(self.report)")
+                
+                let alert = UIAlertController(
+                        title: "Move In state",
+                    message: self.report, preferredStyle: .alert)
+                alert.addAction(
+                        UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                            print("OK button pressed!")
+                        })
+                    )
+                    self.present(alert, animated: true, completion: nil)
+                // handle move out here
+                
+                if(response == 409){
+                self.networkController.MoveIN(fk: self.pid ?? -1, method: "DELETE",completionHandler: { (response) in
+                        switch response {
+                        case 200: self.report = "Moved Out~"
+                        default: self.report = "Error Occured"
+                        }
+                }){ (error) in
+                    DispatchQueue.main.async {
+                        print("no")
+                    }
+                }
+                }
+                //handle move out here
+            }
+        }){ (error) in
+            DispatchQueue.main.async {
+                print("no")
+            }
+        }
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "ShowMap"{
             let viewcontroller = segue.destination as! MapViewController
@@ -89,16 +132,6 @@ class DetailViewController: UIViewController {
             viewcontroller.apart = self.title
          }
      }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension DetailViewController: NSFetchedResultsControllerDelegate {
   

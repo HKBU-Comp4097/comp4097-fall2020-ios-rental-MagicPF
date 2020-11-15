@@ -90,13 +90,6 @@ class NetworkController {
                     errorHandler(nil)
                     return
             }
-            print("The response is\(response.statusCode)")
-//            guard let data = data, let user =
-//                try? JSONDecoder().decode([User].self, from: data) else {
-//                    errorHandler(nil)
-//                    return
-//            }
-            // Call our completion handler with our news
             guard let data = data, let myuser =
                 try? JSONDecoder().decode(NUser.self, from: data) else {
                     errorHandler(nil)
@@ -109,8 +102,73 @@ class NetworkController {
         
         task.resume()
     }
+    
+    func MoveIN(fk:Int,method:String,completionHandler: @escaping (Int) -> (),
+                        errorHandler: @escaping (Error?) -> ()) {
+        let url = URL(string:"https://morning-plains-00409.herokuapp.com/user/rent/\(fk)")
+                var request = URLRequest.init(url: url!)
+                request.httpMethod = method
+        print("MOVEIN REQUEST: \(request)")
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let response = response as? HTTPURLResponse,
+                response.statusCode != 404 else {
+                print("OOPSSSSSSSSSSSSSSS")
+                errorHandler(nil)
+                    return
+            }
+            print("The response is \(response.statusCode)")
+            completionHandler(response.statusCode)
+        }
+        task.resume()
+    }
+    func fetchMyRentals(completionHandler: @escaping ([Property]) -> (),
+                        errorHandler: @escaping (Error?) -> ()) {
+        
+        let url = URL(string: "https://morning-plains-00409.herokuapp.com/user/MyRentals")!
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                // Server error encountered
+                errorHandler(error)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse,
+                response.statusCode < 300 else {
+                    // Client error encountered
+                    errorHandler(nil)
+                    return
+            }
+            
+            guard let data = data, let property =
+                try? JSONDecoder().decode([Property].self, from: data) else {
+                    errorHandler(nil)
+                    return
+            }
+            print(data)
+            // Call our completion handler with our news
+            completionHandler(property)
+        }
+        
+        task.resume()
+    }
+    func Logout(completionHandler: @escaping (Int) -> (),
+                        errorHandler: @escaping (Error?) -> ()) {
+        let url = URL(string:"https://morning-plains-00409.herokuapp.com/user/logout")
+                var request = URLRequest.init(url: url!)
+                request.httpMethod = "POST"
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let response = response as? HTTPURLResponse,
+                response.statusCode < 500 else {
+                errorHandler(nil)
+                    return
+            }
+            print("The Logout response is \(response.statusCode)")
+            completionHandler(response.statusCode)
+        }
+        task.resume()
+    }
 }
-
 struct Property: Codable {
     let createdAt:Int
     let updatedAt:Int
