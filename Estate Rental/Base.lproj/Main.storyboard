@@ -35,6 +35,10 @@
                                     <constraint firstAttribute="height" constant="44" id="YR4-KF-KUL"/>
                                 </constraints>
                                 <state key="normal" title="Login/Logout"/>
+                                <connections>
+                                    <action selector="LogIO:" destination="xyD-lj-bzn" eventType="touchUpInside" id="Uj6-zR-zvv"/>
+                                    <segue destination="Hgv-D5-WLq" kind="show" identifier="Login" id="DEd-ib-ODV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P8-t9-jqz">
                                 <rect key="frame" x="138" y="563" width="138" height="44"/>
@@ -63,7 +67,8 @@
                             <constraint firstItem="oKC-1y-Rrp" firstAttribute="top" secondItem="xU5-tr-09u" secondAttribute="bottom" constant="8" id="sOY-7d-ryD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="fB0-vf-pCt"/>
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="8QE-YV-jZw"/>
+                    <navigationItem key="navigationItem" id="lXz-FQ-XdH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKB-Sc-dxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-C6-2dB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="1844"/>
+            <point key="canvasLocation" x="1329" y="2627"/>
         </scene>
         <!--EstateScene-->
         <scene sceneID="4Dg-No-zgJ">
@@ -172,6 +177,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQP-mR-h3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2819" y="1110"/>
+        </scene>
+        <!--LoginPage-->
+        <scene sceneID="JT9-dL-WTH">
+            <objects>
+                <viewController title="LoginPage" id="Hgv-D5-WLq" customClass="LoginViewController" customModule="Estate_Rental" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Vb-oc-LMB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gp-C6-ITs">
+                                <rect key="frame" x="105" y="238" width="205" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-0S-iUK">
+                                <rect key="frame" x="105" y="356" width="205" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ6-dP-TWD">
+                                <rect key="frame" x="147" y="503" width="120" height="41"/>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="vNM-Y4-UQ2"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="LoginRequest:" destination="Hgv-D5-WLq" eventType="touchUpInside" id="RxJ-WK-8K6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AkU-C2-Sc3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T2k-0S-iUK" firstAttribute="centerX" secondItem="bZ6-dP-TWD" secondAttribute="centerX" id="9yI-0m-bWe"/>
+                            <constraint firstItem="AkU-C2-Sc3" firstAttribute="bottom" secondItem="bZ6-dP-TWD" secondAttribute="bottom" constant="264" id="G4q-Md-HSB"/>
+                            <constraint firstItem="T2k-0S-iUK" firstAttribute="top" secondItem="5Gp-C6-ITs" secondAttribute="bottom" constant="84" id="JYu-9d-wek"/>
+                            <constraint firstItem="5Gp-C6-ITs" firstAttribute="leading" secondItem="T2k-0S-iUK" secondAttribute="leading" id="Nzp-fe-XWx"/>
+                            <constraint firstItem="5Gp-C6-ITs" firstAttribute="trailing" secondItem="T2k-0S-iUK" secondAttribute="trailing" id="TeR-F7-Ifm"/>
+                            <constraint firstItem="5Gp-C6-ITs" firstAttribute="top" secondItem="AkU-C2-Sc3" secondAttribute="top" constant="150" id="VQO-Lb-UC5"/>
+                            <constraint firstItem="5Gp-C6-ITs" firstAttribute="centerX" secondItem="6Vb-oc-LMB" secondAttribute="centerX" id="jQV-Ab-zSs"/>
+                            <constraint firstItem="5Gp-C6-ITs" firstAttribute="leading" secondItem="AkU-C2-Sc3" secondAttribute="leading" constant="105" id="ka7-2m-AHP"/>
+                            <constraint firstItem="bZ6-dP-TWD" firstAttribute="leading" secondItem="AkU-C2-Sc3" secondAttribute="leading" constant="147" id="oLT-JB-04F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EAS-XS-Ija"/>
+                    <connections>
+                        <outlet property="PWTextField" destination="T2k-0S-iUK" id="EVt-x5-7Dp"/>
+                        <outlet property="UserTextField" destination="5Gp-C6-ITs" id="hXb-rJ-43h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6E-cz-W3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3645" y="1110"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="kQz-Qc-8t1">
@@ -451,7 +510,7 @@
                         <segue destination="K3r-75-Qhr" kind="relationship" relationship="viewControllers" id="sMd-sn-W3P"/>
                         <segue destination="rch-eB-Gee" kind="relationship" relationship="viewControllers" id="sfs-LT-Cnr"/>
                         <segue destination="aHF-aq-eGc" kind="relationship" relationship="viewControllers" id="REb-nL-ZEV"/>
-                        <segue destination="xyD-lj-bzn" kind="relationship" relationship="viewControllers" id="COF-4f-A0s"/>
+                        <segue destination="xyD-lj-bzn" kind="relationship" relationship="viewControllers" id="odd-bu-286"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSq-cG-zVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -528,6 +587,9 @@
         <image name="signpost.left.fill" catalog="system" width="128" height="118"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="quaternarySystemFillColor">
             <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>

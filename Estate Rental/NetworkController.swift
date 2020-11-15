@@ -68,6 +68,39 @@ class NetworkController {
         
         task.resume()
     }
+    func Login(username:String,password:String,completionHandler: @escaping () -> (),
+                        errorHandler: @escaping (Error?) -> ()) {
+        let url = URL(string:"https://morning-plains-00409.herokuapp.com/user/login")
+                var request = URLRequest.init(url: url!)
+                request.httpMethod = "POST"
+        print("Login information username:\(username) password: \(password)")
+        let address = "username="+username+"&password="+password
+                request.httpBody = address.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                // Server error encountered
+                errorHandler(error)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse,
+                response.statusCode == 200 else {
+                    // Client error encountered
+                    errorHandler(nil)
+                    return
+            }
+            
+//            guard let data = data, let user =
+//                try? JSONDecoder().decode([User].self, from: data) else {
+//                    errorHandler(nil)
+//                    return
+//            }
+            // Call our completion handler with our news
+            completionHandler()
+        }
+        
+        task.resume()
+    }
 }
 
 struct Property: Codable {
@@ -84,3 +117,7 @@ struct Property: Codable {
     let h_Property:String
 }
 
+struct User: Codable {
+    let username:String
+    let password:String
+}

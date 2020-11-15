@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
     var apart:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("The estate is \(estate)")
+        print("Map Controller Launched")
         switch estate {
 
         case "Heng Fa Chuen": Location = CLLocation(latitude: 22.2780, longitude: 114.24049)

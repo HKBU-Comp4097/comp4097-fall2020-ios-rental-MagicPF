@@ -15,7 +15,11 @@ class UserViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func LogIO(_ sender: UIButton) {
+        print("Start Login")
+        self.performSegue(withIdentifier: "Login", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
