@@ -81,7 +81,17 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func MoveIN(_ sender: UIButton) {
-        
+        if User.currentUser.id == -1{
+            let alert = UIAlertController(
+                    title: "Hummmmmmm",
+                message: "Please Login First~ :)", preferredStyle: .alert)
+            alert.addAction(
+                    UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                        print("OK button pressed!")
+                    })
+                )
+                self.present(alert, animated: true, completion: nil)
+        }
         networkController.MoveIN(fk: pid ?? -1, method: "POST",completionHandler: { (response) in
             DispatchQueue.main.async {
                 switch response {
