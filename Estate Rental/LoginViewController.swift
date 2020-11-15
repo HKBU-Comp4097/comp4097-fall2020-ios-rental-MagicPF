@@ -21,13 +21,35 @@ class LoginViewController: UIViewController {
     @IBAction func LoginRequest(_ sender: UIButton) {
         let networkController = NetworkController()
         networkController.Login(username:UserTextField.text ?? "",password: PWTextField.text ?? "", completionHandler:
-            { () in
+            { (myuser) in
                 DispatchQueue.main.async {
-                    print("LOGIN SUCCESSED")
+                    User.currentUser.username = myuser.username
+                    User.currentUser.avatar = myuser.avatar
+                    User.currentUser.id = myuser.id
+                    
+                    let alert = UIAlertController(
+                            title: "Congratulation!",
+                        message: "Welcome to Estate Rental\(self.UserTextField.text ?? "Username")", preferredStyle: .alert)
+                    alert.addAction(
+                            UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                                print("OK button pressed!")
+                            })
+                        )
+                        self.present(alert, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "LoginF", sender: "login")
                 }
         }) { (error) in
             DispatchQueue.main.async {
-                print("LOGIN FAILD")
+                print("The Error reason is \(error)")
+                let alert = UIAlertController(
+                        title: "Oops! Login faild",
+                    message: "There is sth wrong with your account~", preferredStyle: .alert)
+                alert.addAction(
+                        UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                            print("OK button pressed!")
+                        })
+                    )
+                    self.present(alert, animated: true, completion: nil)
             }
         }
 

@@ -9,15 +9,35 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    @IBOutlet weak var avatarView: UIImageView!
+    @IBOutlet weak var NameView: UILabel!
+    let networkController = NetworkController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if User.currentUser.id != -1{
+            networkController.fetchImage(for: User.currentUser.avatar, completionHandler: { (data) in
+                DispatchQueue.main.async {
+                    self.avatarView.image = UIImage(data: data, scale:1)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                    self.avatarView.image = UIImage(systemName: "person.fill")
+                }
+            }
+            self.NameView.text = User.currentUser.username
+        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func LogIO(_ sender: UIButton) {
-        print("Start Login")
-        self.performSegue(withIdentifier: "Login", sender: nil)
+        if User.currentUser.id == -1{
+            self.performSegue(withIdentifier: "Login", sender: nil)
+        }
+        else{
+            User.currentUser.id = -1
+            avatarView.image = UIImage(systemName: "person.fill")
+            NameView.text = "Username"
+        }
     }
     
     /*
