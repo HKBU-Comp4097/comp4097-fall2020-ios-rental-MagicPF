@@ -14,14 +14,12 @@ class NetworkController {
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                // Server error encountered
                 errorHandler(error)
                 return
             }
             
             guard let response = response as? HTTPURLResponse,
                 response.statusCode < 300 else {
-                    // Client error encountered
                     errorHandler(nil)
                     return
             }
@@ -31,8 +29,6 @@ class NetworkController {
                     errorHandler(nil)
                     return
             }
-            print(data)
-            // Call our completion handler with our news
             completionHandler(property)
         }
         
@@ -45,14 +41,12 @@ class NetworkController {
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                // Server error encountered
                 errorHandler(error)
                 return
             }
             
             guard let response = response as? HTTPURLResponse,
                 response.statusCode < 300 else {
-                    // Client error encountered
                     errorHandler(nil)
                     return
             }
@@ -61,8 +55,6 @@ class NetworkController {
                 errorHandler(nil)
                 return
             }
-            
-            // Call our completion handler with our news
             completionHandler(data)
         }
         
@@ -73,20 +65,16 @@ class NetworkController {
         let url = URL(string:"https://morning-plains-00409.herokuapp.com/user/login")
                 var request = URLRequest.init(url: url!)
                 request.httpMethod = "POST"
-        print("Login information username:\(username) password: \(password)")
         let address = "username="+username+"&password="+password
                 request.httpBody = address.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                // Server error encountered
                 errorHandler(error)
                 return
             }
             
             guard let response = response as? HTTPURLResponse,
                 response.statusCode == 200 else {
-                    // Client error encountered
-                
                     errorHandler(nil)
                     return
             }
@@ -95,8 +83,6 @@ class NetworkController {
                     errorHandler(nil)
                     return
             }
-            print("The data are \(data)")
-            // Call our completion handler with our news
             completionHandler(myuser)
         }
         
@@ -108,15 +94,13 @@ class NetworkController {
         let url = URL(string:"https://morning-plains-00409.herokuapp.com/user/rent/\(fk)")
                 var request = URLRequest.init(url: url!)
                 request.httpMethod = method
-        print("MOVEIN REQUEST: \(request)")
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let response = response as? HTTPURLResponse,
                 response.statusCode != 404 else {
-                print("OOPSSSSSSSSSSSSSSS")
                 errorHandler(nil)
                     return
             }
-            print("The response is \(response.statusCode)")
+            
             completionHandler(response.statusCode)
         }
         task.resume()
@@ -128,14 +112,12 @@ class NetworkController {
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                // Server error encountered
                 errorHandler(error)
                 return
             }
             
             guard let response = response as? HTTPURLResponse,
                 response.statusCode < 300 else {
-                    // Client error encountered
                     errorHandler(nil)
                     return
             }
@@ -145,8 +127,6 @@ class NetworkController {
                     errorHandler(nil)
                     return
             }
-            print(data)
-            // Call our completion handler with our news
             completionHandler(property)
         }
         
@@ -163,7 +143,6 @@ class NetworkController {
                 errorHandler(nil)
                     return
             }
-            print("The Logout response is \(response.statusCode)")
             completionHandler(response.statusCode)
         }
         task.resume()

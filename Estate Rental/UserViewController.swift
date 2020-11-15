@@ -31,7 +31,7 @@ class UserViewController: UIViewController {
     
     @IBAction func LogIO(_ sender: UIButton) {
         if User.currentUser.id == -1{
-            self.performSegue(withIdentifier: "Login", sender: nil)
+            print("Login start")
         }
         else{
             User.currentUser.id = -1
@@ -45,7 +45,6 @@ class UserViewController: UIViewController {
                 }
             }
         }
-        
     }
 
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,5 +52,4 @@ class UserViewController: UIViewController {
             viewController.father = self
         }
    }
-
 }

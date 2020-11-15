@@ -21,7 +21,6 @@
 		6F894CBB256179DD00813471 /* MyRentalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F894CBA256179DD00813471 /* MyRentalTableViewController.swift */; };
 		6F985564255F05F20092C362 /* EstateRentalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F985562255F05F20092C362 /* EstateRentalModel.xcdatamodeld */; };
 		6F985573255F08690092C362 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F985572255F08690092C362 /* DataController.swift */; };
-		6FA1D3042560694F004FD1ED /* EstateLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1D3032560694F004FD1ED /* EstateLocations.swift */; };
 		6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD16009255C5D5400D3AF83 /* AppDelegate.swift */; };
 		6FD1600C255C5D5400D3AF83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD1600B255C5D5400D3AF83 /* SceneDelegate.swift */; };
 		6FD16011255C5D5400D3AF83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD1600F255C5D5400D3AF83 /* Main.storyboard */; };
@@ -64,7 +63,6 @@
 		6F894CBA256179DD00813471 /* MyRentalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRentalTableViewController.swift; sourceTree = "<group>"; };
 		6F985563255F05F20092C362 /* EstateRentalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstateRentalModel.xcdatamodel; sourceTree = "<group>"; };
 		6F985572255F08690092C362 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		6FA1D3032560694F004FD1ED /* EstateLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateLocations.swift; sourceTree = "<group>"; };
 		6FD16006255C5D5400D3AF83 /* Estate Rental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Estate Rental.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD16009255C5D5400D3AF83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD1600B255C5D5400D3AF83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				6FD16014255C5D5700D3AF83 /* LaunchScreen.storyboard */,
 				6FD16017255C5D5700D3AF83 /* Info.plist */,
 				6FD16042255C641800D3AF83 /* MapViewController.swift */,
-				6FA1D3032560694F004FD1ED /* EstateLocations.swift */,
 			);
 			path = "Estate Rental";
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				6FD1600A255C5D5400D3AF83 /* AppDelegate.swift in Sources */,
 				6F5454FA255D53DD0036B637 /* RoomOpt.swift in Sources */,
 				6F985573255F08690092C362 /* DataController.swift in Sources */,
-				6FA1D3042560694F004FD1ED /* EstateLocations.swift in Sources */,
 				6F1F6B1E2561368D003F488F /* User.swift in Sources */,
 				6F985564255F05F20092C362 /* EstateRentalModel.xcdatamodeld in Sources */,
 				6F62EF01255F9400007C4801 /* PropertyManagedObject+CoreDataClass.swift in Sources */,

@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
                     User.currentUser.username = myuser.username
                     User.currentUser.avatar = myuser.avatar
                     User.currentUser.id = myuser.id
-                    
                     let alert = UIAlertController(
                             title: "Congratulation!",
                         message: "Welcome to Estate Rental\(self.UserTextField.text ?? "Username")", preferredStyle: .alert)
@@ -36,11 +35,10 @@ class LoginViewController: UIViewController {
                                 print("OK button pressed!")
                             })
                         )
-                        self.present(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                     self.father?.viewDidLoad()
                     self.presentingViewController!.dismiss(animated: true, completion: nil)
-                    
-//                    self.performSegue(withIdentifier: "login", sender: "login")
+
                 }
         }) { (error) in
             DispatchQueue.main.async {
@@ -55,26 +53,5 @@ class LoginViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
             }
         }
-
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let viewController = segue.source as? UserViewController {
-//            if User.currentUser.id != -1{
-//                networkController.fetchImage(for: User.currentUser.avatar, completionHandler: { (data) in
-//                    DispatchQueue.main.async {
-//                        viewController.avatarView.image = UIImage(data: data, scale:1)
-//                    }
-//                }) { (error) in
-//                    DispatchQueue.main.async {
-//                        viewController.avatarView.image = UIImage(systemName: "person.fill")
-//                    }
-//                }
-//                viewController.NameView.text = User.currentUser.username
-//
-//            }         // Get the new view controller using segue.destination.
-//        // Pass the selected object to the new view controller.
-//        }
-//
-//    }
 }

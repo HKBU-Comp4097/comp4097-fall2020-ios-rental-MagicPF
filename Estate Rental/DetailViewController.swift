@@ -53,10 +53,6 @@ class DetailViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let TitleLabel = viewWithTag(2) as? UILabel {
-//            cellLabel.text = fetchedResultsController.object(at: <#T##IndexPath#>).property_title
-//        }
-//        print("OPENED \(ptitle) ~~~~~~")
         PTitle.text = ptitle
         PEstate.text = pest
         PRoom.text = String(pbed ?? -1)
@@ -77,7 +73,6 @@ class DetailViewController: UIViewController {
     
     @IBAction func ShowMap(_ sender: UIButton) {
         print("Button Pressed")
-        self.performSegue(withIdentifier: "ShowMap", sender: "Address Button")
     }
     
     @IBAction func MoveIN(_ sender: UIButton) {
@@ -101,7 +96,7 @@ class DetailViewController: UIViewController {
                 default: self.report = "Error Occured!!!"
                 }
                 
-                print("Inside The report is \(self.report)")
+//                print("Inside The report is \(self.report)")
                 
                 let alert = UIAlertController(
                         title: "Move In state",
